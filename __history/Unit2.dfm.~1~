@@ -1,0 +1,22 @@
+object AboutForm: TAboutForm
+  Left = 0
+  Top = 0
+  BorderStyle = bsSingle
+  Caption = 'AboutForm'
+  ClientHeight = 131
+  ClientWidth = 315
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  TextHeight = 15
+  object Label1: TLabel
+    Left = 72
+    Top = 56
+    Width = 171
+    Height = 15
+    Caption = 'Converter Img To WebP by Gulik'
+  end
+end

@@ -32,6 +32,7 @@ type
     Label1: TLabel;
     CheckBox1: TCheckBox;
     Edit1: TEdit;
+    Splitter1: TSplitter;
     procedure Exit1Click(Sender: TObject);
     procedure About1Click(Sender: TObject);
     procedure Button5Click(Sender: TObject);
@@ -59,11 +60,14 @@ uses Unit2, Unit3;
 
 procedure LoadFileList(aFiles: TStrings; sPath: string; sMask: string = '*.*');
   var
-    aFile: string;
+    aFile, str: string;
 begin
   aFiles.Clear;
-  for aFile in TDirectory.GetFiles(IncludeTrailingPathDelimiter(sPath), sMask) do
-    aFiles.Add(aFile);
+  for aFile in TDirectory.GetFiles(IncludeTrailingPathDelimiter(sPath), sMask) do begin
+    str := aFile;
+    Delete(str, 1, 3);
+    aFiles.Add(str);
+  end;
 end;
 
 procedure TMainForm.About1Click(Sender: TObject);
@@ -118,7 +122,7 @@ procedure TMainForm.Button5Click(Sender: TObject);
     fs : TFileStream;
     bmp : TGPBitmap;
     dat : PByte;
-    str: string;
+    str, fileName: string;
     i: Integer;
 begin
   if lbOut.Items.Count < 0 then begin
@@ -129,19 +133,25 @@ begin
   ProgressBar1.Max := lbOut.Items.Count;
   for i:= 0 to lbOut.Items.Count - 1 do begin
     Application.ProcessMessages();
-    str := lbOut.Items[i];
+    str := 'in\'+lbOut.Items[i];
+    if CheckBox1.Checked then begin
+      fileName := IntToStr(i);
+    end
+    else begin
+      fileName := Copy(lbOut.Items[i], 1, Length(lbOut.Items[i]) - Length(ExtractFileExt(lbOut.Items[i])));
+    end;
     if cbSettings.Text = 'webp' then begin
       stream := TMemoryStream.Create;
       bmp := TGPBitmap.Create(str);
       WebpEncode(stream, bmp, SettingForm.tbWebpQuality.Position);
-      stream.SaveToFile('out\'+ IntToStr(i) +'.webp');
+      stream.SaveToFile('out\'+ fileName +'.webp');
       bmp.Free;
       stream.Free;
     end;
     if cbSettings.Text = 'jpeg' then begin
       fs := TFileStream.Create(str, fmOpenRead);
       WebpDecode(fs, dat, bmp);
-      bmp.Save('out\'+ IntToStr(i) +'.jpeg', gPJG);
+      bmp.Save('out\'+ fileName +'.jpeg', gPJG);
       bmp.Free;
       fs.Free;
       WebPFree(dat);

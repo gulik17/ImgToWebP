@@ -18,14 +18,24 @@ object MainForm: TMainForm
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 15
+  object Splitter1: TSplitter
+    Left = 333
+    Top = 0
+    Height = 421
+    Align = alRight
+    Color = clNavy
+    ParentColor = False
+    ExplicitLeft = 332
+  end
   object lbIn: TListBox
     Left = 0
     Top = 0
-    Width = 332
+    Width = 333
     Height = 421
     Align = alClient
     ItemHeight = 15
     TabOrder = 0
+    ExplicitWidth = 332
   end
   object Panel2: TPanel
     Left = 0
@@ -43,6 +53,7 @@ object MainForm: TMainForm
       Top = 24
       Width = 41
       Height = 15
+      Anchors = [akTop, akRight]
       Caption = 'Format:'
     end
     object Button5: TButton
@@ -83,11 +94,10 @@ object MainForm: TMainForm
         'jpeg')
     end
     object Button1: TButton
-      Left = 246
+      Left = 6
       Top = 20
       Width = 90
       Height = 25
-      Anchors = [akTop, akRight]
       Caption = #1054#1073#1085#1086#1074#1080#1090#1100
       TabOrder = 3
       OnClick = Button1Click
@@ -99,9 +109,6 @@ object MainForm: TMainForm
       Height = 17
       Anchors = [akTop, akRight]
       Caption = 'Rename:'
-      Checked = True
-      Enabled = False
-      State = cbChecked
       TabOrder = 4
     end
     object Edit1: TEdit
@@ -116,9 +123,9 @@ object MainForm: TMainForm
     end
   end
   object Panel3: TPanel
-    Left = 332
+    Left = 336
     Top = 0
-    Width = 450
+    Width = 446
     Height = 421
     Align = alRight
     BevelOuter = bvNone
@@ -127,11 +134,12 @@ object MainForm: TMainForm
     object lbOut: TListBox
       Left = 125
       Top = 0
-      Width = 325
+      Width = 321
       Height = 421
       Align = alClient
       ItemHeight = 15
       TabOrder = 0
+      ExplicitWidth = 325
     end
     object Panel1: TPanel
       Left = 0

@@ -1,10 +1,9 @@
 object MainForm: TMainForm
   Left = 0
   Top = 0
-  BorderWidth = 1
   Caption = 'MainForm'
-  ClientHeight = 539
-  ClientWidth = 782
+  ClientHeight = 541
+  ClientWidth = 784
   Color = clBtnFace
   Constraints.MinHeight = 600
   Constraints.MinWidth = 800
@@ -19,45 +18,46 @@ object MainForm: TMainForm
   PixelsPerInch = 96
   TextHeight = 15
   object Splitter1: TSplitter
-    Left = 333
+    Left = 335
     Top = 0
-    Height = 421
+    Height = 423
     Align = alRight
     Color = clNavy
     ParentColor = False
     ExplicitLeft = 332
+    ExplicitHeight = 421
   end
   object lbIn: TListBox
     Left = 0
     Top = 0
-    Width = 333
-    Height = 421
+    Width = 335
+    Height = 423
     Align = alClient
     ItemHeight = 15
     TabOrder = 0
-    ExplicitWidth = 332
   end
   object Panel2: TPanel
     Left = 0
-    Top = 421
-    Width = 782
+    Top = 423
+    Width = 784
     Height = 101
     Align = alBottom
     BevelOuter = bvNone
     TabOrder = 1
     DesignSize = (
-      782
+      784
       101)
     object Label1: TLabel
-      Left = 410
+      Left = 412
       Top = 24
       Width = 41
       Height = 15
       Anchors = [akTop, akRight]
       Caption = 'Format:'
+      ExplicitLeft = 410
     end
     object Button5: TButton
-      Left = 685
+      Left = 687
       Top = 59
       Width = 90
       Height = 25
@@ -70,7 +70,7 @@ object MainForm: TMainForm
       OnClick = Button5Click
     end
     object Button6: TButton
-      Left = 685
+      Left = 687
       Top = 20
       Width = 90
       Height = 25
@@ -80,7 +80,7 @@ object MainForm: TMainForm
       OnClick = Button6Click
     end
     object cbSettings: TComboBox
-      Left = 457
+      Left = 459
       Top = 21
       Width = 218
       Height = 23
@@ -103,7 +103,7 @@ object MainForm: TMainForm
       OnClick = Button1Click
     end
     object CheckBox1: TCheckBox
-      Left = 386
+      Left = 388
       Top = 63
       Width = 65
       Height = 17
@@ -112,7 +112,7 @@ object MainForm: TMainForm
       TabOrder = 4
     end
     object Edit1: TEdit
-      Left = 457
+      Left = 459
       Top = 60
       Width = 218
       Height = 23
@@ -123,10 +123,10 @@ object MainForm: TMainForm
     end
   end
   object Panel3: TPanel
-    Left = 336
+    Left = 338
     Top = 0
     Width = 446
-    Height = 421
+    Height = 423
     Align = alRight
     BevelOuter = bvNone
     Caption = 'Panel3'
@@ -135,17 +135,16 @@ object MainForm: TMainForm
       Left = 125
       Top = 0
       Width = 321
-      Height = 421
+      Height = 423
       Align = alClient
       ItemHeight = 15
       TabOrder = 0
-      ExplicitWidth = 325
     end
     object Panel1: TPanel
       Left = 0
       Top = 0
       Width = 125
-      Height = 421
+      Height = 423
       Align = alLeft
       BevelOuter = bvNone
       TabOrder = 1
@@ -189,8 +188,8 @@ object MainForm: TMainForm
   end
   object ProgressBar1: TProgressBar
     Left = 0
-    Top = 522
-    Width = 782
+    Top = 524
+    Width = 784
     Height = 17
     Align = alBottom
     TabOrder = 3

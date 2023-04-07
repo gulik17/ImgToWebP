@@ -1,12 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
-	<Transactions>
-    <Transaction>1899.12.30 00:00:00.000.079,=C:\Users\Gulik\Desktop\ImgToWebP\Unit4.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.149,C:\Users\Gulik\Desktop\ImgToWebP\Unit1.pas=C:\Users\Gulik\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.634,=C:\Users\Gulik\Desktop\ImgToWebP\Unit2.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.057,=C:\Users\Gulik\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.602,=C:\Users\Gulik\Desktop\ImgToWebP\Unit3.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.707,C:\Users\Gulik\Desktop\ImgToWebP\Project1.dproj=C:\Users\Gulik\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.149,C:\Users\Gulik\Desktop\ImgToWebP\Unit1.dfm=C:\Users\Gulik\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
-  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="libwebp.pas"/>
+    <File Path="Unit1.pas"/>
+    <File Path="Unit1.dfm"/>
+    <File Path="Unit2.pas"/>
+    <File Path="Unit2.dfm"/>
+    <File Path="Unit3.pas"/>
+    <File Path="Unit3.dfm"/>
+    <File Path="WebpHelpers.pas"/>
+    <File Path="Vcl.WebpImage.pas"/>
+  </ProjectSortOrder>
 </BorlandProject>
